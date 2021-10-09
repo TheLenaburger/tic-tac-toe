@@ -17,8 +17,8 @@ const signUpSuccess = function (responseData) {
   console.log(responseData)
 }
 
-const signUpFailure = function (error) {
-  $('#user-feedback').text('There was an error getting you signed up. Please try again.')
+const onError = function (error) {
+  $('#user-feedback').text('There was an error handling that request. Please try again.')
   $('#user-feedback').addClass('text-danger')
 
   setTimeout(() => {
@@ -51,21 +51,25 @@ const signInSuccess = function (responseData) {
   console.log(responseData)
 }
 
-const signInFailure = function (error) {
-  $('#user-feedback').text('There was an error signing in. Please try again.')
-  $('#user-feedback').addClass('text-danger')
+const signOutSuccess = function () {
+  $('#user-feedback').text("You've successfully signed out; see ya next time!")
+  $('#user-feedback').addClass('text-success')
+  $('form').trigger('reset')
+
+  $('#before-sign-in').show(1000)
+  $('#sign-out').hide(1000)
+  $('#rules-text').hide(1000)
+  $('#game-board').hide(1000)
 
   setTimeout(() => {
     $('#user-feedback').removeClass()
     $('#user-feedback').text('')
   }, 5000)
-
-  console.error('The error is ', error)
 }
 
 module.exports = {
   signUpSuccess,
-  signUpFailure,
+  onError,
   signInSuccess,
-  signInFailure
+  signOutSuccess
 }
