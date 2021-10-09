@@ -15,29 +15,23 @@
   <body>
     <header>
       <h1>Tic Tac Toe Game</h1>
-      <h4>Create a New User or Sign in to get to that sweet Tic Tac Toe action!</h4>
+      <section id="before-sign-in">
+        <h4>Create a New User or Sign in to get to that sweet Tic Tac Toe action!</h4>
 
-      <nav>
-        <ul>
-          <li>[Create New User]
-            <form id="sign-up">
-              <input type="email" name="credentials[email]" placeholder="Email Address" required>
-              <input type="password" name="credentials[password]" placeholder="Password" required>
-              <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
-              <button class="btn btn-primary">Sign Me Up!</button>
-            </form>
-          </li>
-          <li>[Sign In Form]</li>
-            <form id="sign-in">
-              <input type="email" placeholder="Email Address" required>
-              <input type="password" placeholder="Password" required>
-              <button class="btn btn-primary">Sign In</button>
-            </form>
-          <li>[Sign Out Button]
-            <button id="sign-out" class="btn btn-danger">Sign Out</button>
-          </li>
-        </ul>
-      </nav>
+        <form id="sign-up">
+          <input type="email" name="credentials[email]" placeholder="Email Address" required>
+          <input type="password" name="credentials[password]" placeholder="Password" required>
+          <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+          <button class="btn btn-primary">Sign Me Up!</button>
+        </form>
+        <form id="sign-in">
+          <input type="email" name="credentials[email]" placeholder="Email Address" required>
+          <input type="password" name="credentials[password]" placeholder="Password" required>
+          <button class="btn btn-primary">Sign In</button>
+        </form>
+      </section>
+
+      <button id="sign-out" class="btn btn-danger">Sign Out</button>
 
       <div id="user-feedback"></div>
     </header>
@@ -51,7 +45,7 @@
       </ol>
     </div>
 
-    <div id="game board">This is the game board div
+    <div id="game-board">This is the game board div
       <div id="top-left" class="play-area">top left</div>
       <div id="top-mid" class="play-area">top mid</div>
       <div id="top-right" class="play-area">top right</div>
