@@ -21,9 +21,9 @@
         <ul>
           <li>[Create New User]
             <form id="sign-up">
-              <input type="email" placeholder="Email Address" required>
-              <input type="password" placeholder="Password" required>
-              <input type="password" placeholder="Password Confirmation" required>
+              <input type="email" name="credentials[email]" placeholder="Email Address" required>
+              <input type="password" name="credentials[password]" placeholder="Password" required>
+              <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
               <button class="btn btn-primary">Sign Me Up!</button>
             </form>
           </li>
@@ -39,24 +39,29 @@
         </ul>
       </nav>
 
+      <div id="user-feedback"></div>
+    </header>
+
+    <div id="rules-text">
       <h4>Here's a bit of a refresher on the rules</h4>
       <ol>
         <li>X always goes first</li>
         <li>Plays alternate between X and O</li>
         <li>Get three of your symbol in a row to win</li>
       </ol>
+    </div>
 
-      <div id="game board">This is the game board div
-        <div id="top-left" class="play-area">top left</div>
-        <div id="top-mid" class="play-area">top mid</div>
-        <div id="top-right" class="play-area">top right</div>
-        <div id="mid-left" class="play-area">mid left</div>
-        <div id="middle" class="play-area">middle</div>
-        <div id="mid-right" class="play-area">mid righ</div>
-        <div id="bot-left" class="play-area">bot left</div>
-        <div id="bot-mid" class="play-area">bot mid</div>
-        <div id="bot-right" class="play-area">bot right</div>
-      </div>
-    </header>
+    <div id="game board">This is the game board div
+      <div id="top-left" class="play-area">top left</div>
+      <div id="top-mid" class="play-area">top mid</div>
+      <div id="top-right" class="play-area">top right</div>
+      <div id="mid-left" class="play-area">mid left</div>
+      <div id="middle" class="play-area">middle</div>
+      <div id="mid-right" class="play-area">mid righ</div>
+      <div id="bot-left" class="play-area">bot left</div>
+      <div id="bot-mid" class="play-area">bot mid</div>
+      <div id="bot-right" class="play-area">bot right</div>
+    </div>
+
   </body>
 </html>

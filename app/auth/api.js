@@ -1,5 +1,5 @@
 const config = require('../config')
-const store = require('../store')
+// const store = require('../store')
 
 const signUp = function (formData) {
   return $.ajax({
