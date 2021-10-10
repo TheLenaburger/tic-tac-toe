@@ -15,6 +15,7 @@
   <body>
     <header>
       <h1>Tic Tac Toe Game</h1>
+
       <section id="before-sign-in">
         <h4>Create a New User or Sign in to get to that sweet Tic Tac Toe action!</h4>
 
@@ -32,10 +33,12 @@
       </section>
 
       <section id="after-sign-in">
+        <!-- This is where v2 functionality buttons will live -->
 
         <button id="sign-out" class="btn btn-danger">Sign Out</button>
       </section>
 
+      <!-- This is the location for authorization/error messages -->
       <div id="user-feedback"></div>
     </header>
 
@@ -50,16 +53,21 @@
 
     <button id="new-game" class="btn btn-primary">Start New Game</button>
 
-    <div id="game-board" class="row">
-      <div id="top-left" class="col-4 square" data-cell-index="0">top left</div>
-      <div id="top-mid" class="col-4 square" data-cell-index="1">top mid</div>
-      <div id="top-right" class="col-4 square" data-cell-index="2">top right</div>
-      <div id="mid-left" class="col-4 square" data-cell-index="3">mid left</div>
-      <div id="middle" class="col-4 square" data-cell-index="4">middle</div>
-      <div id="mid-right" class="col-4 square" data-cell-index="5">mid right</div>
-      <div id="bot-left" class="col-4 square" data-cell-index="6">bot left</div>
-      <div id="bot-mid" class="col-4 square" data-cell-index="7">bot mid</div>
-      <div id="bot-right" class="col-4 square" data-cell-index="8">bot right</div>
+    <!-- space for text related to gameplay -->
+    <h4 id="gameplay-feedback"></h4>
+
+    <div id="play-mat" class="container-fluid">
+      <div id="game-board" class="row">
+        <div id="top-left" class="col-4 square" data-cell-index="0">top left</div>
+        <div id="top-mid" class="col-4 square" data-cell-index="1">top mid</div>
+        <div id="top-right" class="col-4 square" data-cell-index="2">top right</div>
+        <div id="mid-left" class="col-4 square" data-cell-index="3">mid left</div>
+        <div id="middle" class="col-4 square" data-cell-index="4">middle</div>
+        <div id="mid-right" class="col-4 square" data-cell-index="5">mid right</div>
+        <div id="bot-left" class="col-4 square" data-cell-index="6">bot left</div>
+        <div id="bot-mid" class="col-4 square" data-cell-index="7">bot mid</div>
+        <div id="bot-right" class="col-4 square" data-cell-index="8">bot right</div>
+      </div>
     </div>
 
   </body>

@@ -1,18 +1,19 @@
 @import '~bootstrap/scss/bootstrap';
 
-// #after-sign-in, #rules-text, #game-board {
-//   display: none
-// }
+#after-sign-in, #new-game, #rules-text, #play-mat {
+  display: none;
+}
 
 #game-board {
-  width: 65%;
+  width: 55vw;
+  height: 55vw;
 }
 
-.square:before {
-  content: "";
-  display: block;
-  padding-top: 100%;
-}
+// .square:before {
+//   content: "";
+//   float: left;
+//   padding-top: 100%;
+// }
 
 // .content {
 //   float: left;
