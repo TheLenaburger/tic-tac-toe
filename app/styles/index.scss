@@ -1,5 +1,44 @@
 @import '~bootstrap/scss/bootstrap';
 
-#sign-out, #rules-text, #game-board {
-  display: none
+#after-sign-in, #new-game, #rules-text, #play-mat {
+  display: none;
+}
+
+#game-board {
+  width: 40vw;
+  height: 40vw;
+}
+
+// .square:before {
+//   content: "";
+//   float: left;
+//   padding-top: 100%;
+// }
+
+// .content {
+//   float: left;
+// }
+
+#middle {
+  border: 1px solid black;
+}
+
+#top-mid {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#bot-mid {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+#mid-left {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#mid-right {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
