@@ -10,7 +10,7 @@ const signUpSuccess = function (responseData) {
 
   // This will reset the feedback message div to blank after 5 sec
   setTimeout(() => {
-    $('#user-feedback').removeClass()
+    $('#user-feedback').removeClass('text-success')
     $('#user-feedback').text('')
   }, 5000)
 
@@ -22,7 +22,7 @@ const onError = function (error) {
   $('#user-feedback').addClass('text-danger')
 
   setTimeout(() => {
-    $('#user-feedback').removeClass()
+    $('#user-feedback').removeClass('text-danger')
     $('#user-feedback').text('')
   }, 5000)
 
@@ -41,10 +41,9 @@ const signInSuccess = function (responseData) {
   $('#before-sign-in').hide(1000)
   $('#after-sign-in').show(1000)
   $('#new-game').show(1000)
-  $('#rules-text').show(1000)
 
   setTimeout(() => {
-    $('#user-feedback').removeClass()
+    $('#user-feedback').removeClass('text-success')
     $('#user-feedback').text('')
   }, 5000)
 
@@ -58,12 +57,12 @@ const signOutSuccess = function () {
 
   $('#before-sign-in').show(1000)
   $('#sign-out').hide(1000)
-  $('#rules-text').hide(1000)
   $('#new-game').hide(1000)
-  $('#game-board').hide(1000)
+  $('#play-mat').hide(1000)
+  $('#gameplay-feedback').hide(1000)
 
   setTimeout(() => {
-    $('#user-feedback').removeClass()
+    $('#user-feedback').removeClass('text-success')
     $('#user-feedback').text('')
   }, 5000)
 }

@@ -15,60 +15,81 @@
   <body>
     <header>
       <h1>Tic Tac Toe Game</h1>
+      <div id="before-sign-in" class="container">
+        <div class="row text-center justify-content-around forms">
+          <div class="col-12">
+            <h4>Create a New User or Sign in to get to that sweet Tic Tac Toe action!</h4>
+          </div>
+          <div class="col-xs-12 col-sm-5 col-lg-4 col-xl-3 p-2 border">
+            <form id="sign-up">
+              <input type="email" name="credentials[email]" placeholder="Email Address" required>
+              <input type="password" name="credentials[password]" placeholder="Password" required>
+              <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+              <br>
+              <button class="btn btn-primary">Sign Me Up!</button>
+            </form>
+          </div>
 
-      <section id="before-sign-in">
-        <h4>Create a New User or Sign in to get to that sweet Tic Tac Toe action!</h4>
+          <div class="col-xs-12 col-sm-5 col-lg-4 col-xl-3 p-2 border">
+            <form id="sign-in">
+              <input type="email" name="credentials[email]" placeholder="Email Address" required>
+              <input type="password" name="credentials[password]" placeholder="Password" required>
+              <br>
+              <button class="btn btn-primary">Sign In</button>
+            </form>
+          </div>
+        </div>
+      </div>
 
-        <form id="sign-up">
-          <input type="email" name="credentials[email]" placeholder="Email Address" required>
-          <input type="password" name="credentials[password]" placeholder="Password" required>
-          <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
-          <button class="btn btn-primary">Sign Me Up!</button>
-        </form>
-        <form id="sign-in">
-          <input type="email" name="credentials[email]" placeholder="Email Address" required>
-          <input type="password" name="credentials[password]" placeholder="Password" required>
-          <button class="btn btn-primary">Sign In</button>
-        </form>
-      </section>
-
-      <section id="after-sign-in">
-        <!-- This is where v2 functionality buttons will live -->
-
-        <button id="sign-out" class="btn btn-danger">Sign Out</button>
-      </section>
-
+      <div id="after-sign-in" class="container">
+        <div class="row user-buttons">
+          <!-- This is where v2 functionality buttons will live -->
+          <div class="col-3 user-buttons">
+            <button id="sign-out" class="btn btn-danger">Sign Out</button>
+          </div>
+          <div class="col-3 user-buttons">
+            <button id="new-game" class="btn btn-primary">New Game</button>
+          </div>
+        </div>
+      </div>
       <!-- This is the location for authorization/error messages -->
-      <div id="user-feedback"></div>
+      <div id="user-feedback" class="feedback"></div>
     </header>
-
-    <div id="rules-text">
-      <h4>Here's a bit of a refresher on the rules</h4>
-      <ol>
-        <li>X always goes first</li>
-        <li>Plays alternate between X and O</li>
-        <li>Get three of your symbol in a row to win</li>
-      </ol>
-    </div>
-
-    <button id="new-game" class="btn btn-primary">Start New Game</button>
+    <hr>
 
     <!-- space for text related to gameplay -->
-    <h4 id="gameplay-feedback"></h4>
+    <h4 id="gameplay-feedback" class="feedback"></h4>
 
-    <div id="play-mat" class="container-fluid">
-      <div id="game-board" class="row">
-        <div id="top-left" class="col-4 square" data-cell-index="0">top left</div>
-        <div id="top-mid" class="col-4 square" data-cell-index="1">top mid</div>
-        <div id="top-right" class="col-4 square" data-cell-index="2">top right</div>
-        <div id="mid-left" class="col-4 square" data-cell-index="3">mid left</div>
-        <div id="middle" class="col-4 square" data-cell-index="4">middle</div>
-        <div id="mid-right" class="col-4 square" data-cell-index="5">mid right</div>
-        <div id="bot-left" class="col-4 square" data-cell-index="6">bot left</div>
-        <div id="bot-mid" class="col-4 square" data-cell-index="7">bot mid</div>
-        <div id="bot-right" class="col-4 square" data-cell-index="8">bot right</div>
+    <div id="play-mat" class="container">
+      <div id="game-board" class="row h-100">
+        <div class="col-4 square" data-cell-index="0">
+          top left
+        </div>
+        <div class="col-4 square" data-cell-index="1">
+          top mid
+        </div>
+        <div class="col-4 square" data-cell-index="2">
+          top right
+        </div>
+        <div class="col-4 square" data-cell-index="3">
+          mid left
+        </div>
+        <div class="col-4 square" data-cell-index="4">
+          middle
+        </div>
+        <div class="col-4 square" data-cell-index="5">
+          mid right
+        </div>
+        <div class="col-4 square" data-cell-index="6">
+          bot left
+        </div>
+        <div class="col-4 square" data-cell-index="7">
+          bot mid
+        </div>
+        <div class="col-4 square" data-cell-index="8">
+          bot right
+        </div>
       </div>
     </div>
-
   </body>
 </html>
