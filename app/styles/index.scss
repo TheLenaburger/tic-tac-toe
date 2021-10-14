@@ -1,44 +1,39 @@
 @import '~bootstrap/scss/bootstrap';
 
-#after-sign-in, #new-game, #rules-text, #play-mat {
+#after-sign-in, #new-game, #play-mat {
   display: none;
 }
 
+h1, .feedback {
+  text-align: center;
+}
+
+#play-mat {
+  height: 75vh;
+}
+
 #game-board {
-  width: 40vw;
-  height: 40vw;
+  margin: auto;
+
+  max-height: calc(75vh-75px);
+  max-width: calc(75vh-75px);
 }
 
-// .square:before {
-//   content: "";
-//   float: left;
-//   padding-top: 100%;
-// }
+.square {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
 
-// .content {
-//   float: left;
-// }
+  &:nth-child(3n) {
+    border-right: 0;
+  }
+  &:nth-last-child(-1n + 3) {
+    border-bottom: 0;
+  }
 
-#middle {
-  border: 1px solid black;
-}
+  min-height: calc(100%/3);
 
-#top-mid {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-#bot-mid {
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-}
-
-#mid-left {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-#mid-right {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
 }
