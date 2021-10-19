@@ -41,6 +41,8 @@ const signInSuccess = function (responseData) {
   $('#before-sign-in').hide(1000)
   $('#after-sign-in').show(1000)
   $('#new-game').show(1000)
+  $('#gameplay-feedback').show(1000)
+  $('#sign-out').show(1000)
 
   setTimeout(() => {
     $('#user-feedback').removeClass('text-success')
