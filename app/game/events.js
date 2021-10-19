@@ -63,8 +63,6 @@ const onPlay = (event) => {
     store.index = $(playedSpace).data('cell-index')
     store.boardState[store.index] = store.currentPlayer
 
-    console.log(store.boardState)
-
     // Then check for a winner on the new boardState array
     checkForWinner(store.boardState)
 

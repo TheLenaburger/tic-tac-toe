@@ -40,6 +40,8 @@ const signInSuccess = function (responseData) {
   // changes in the ui: hiding signin/sign up buttons, showing the gameboard, rules, and sign out button
   $('#before-sign-in').hide(1000)
   $('#after-sign-in').show(1000)
+  $('#sign-out').show(1000)
+  $('#gameplay-feedback').show(1000)
   $('#new-game').show(1000)
 
   setTimeout(() => {
@@ -59,7 +61,7 @@ const signOutSuccess = function () {
   $('#sign-out').hide(1000)
   $('#new-game').hide(1000)
   $('#play-mat').hide(1000)
-  $('#gameplay-feedback').hide(1000)
+  $('#gameplay-feedback').text('').hide(1000)
 
   setTimeout(() => {
     $('#user-feedback').removeClass('text-success')
