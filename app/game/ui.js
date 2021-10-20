@@ -32,13 +32,19 @@ const playSuccessful = (playedSpace) => {
 const onWinner = () => {
   if (store.currentPlayer === 'x') {
     $('#gameplay-feedback').text('Wowee-zowee, looks like X was the winner! Play again?')
+    const score = parseInt($('#xScore').text())
+    $('#xScore').text(score + 1)
   } else {
     $('#gameplay-feedback').text('Wa-hey! Against all odds, O is the winner! Play again?')
+    const score = parseInt($('#oScore').text())
+    $('#oScore').text(score + 1)
   }
 }
 
 const onTie = () => {
   $('#gameplay-feedback').text('Huh... Looks like it was a tie. Play again?')
+  const score = parseInt($('#catScore').text())
+  $('#catScore').text(score + 1)
 }
 
 module.exports = {
