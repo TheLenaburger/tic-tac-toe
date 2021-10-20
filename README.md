@@ -4,4 +4,18 @@ This app is a single-page, user-driven game of Tic Tac Toe. Nothing too fancy; a
 
 ## Important Links
 
-- 
+- [Cozy Tic Tac Toe Page] (https://thelenaburger.github.io/tic-tac-toe/)
+
+## Planning
+
+## User Stories
+
+-As a user, I want to be able to sign up/sign in
+-As a user, I want to be able to start a game of Tic Tac Toe
+-As a user, I want to be able to tell when the game is over, and who won
+-As a user, I want to be able to sign out when I'm done playing
+-As a user, I want to be able to see whose turn it is
+
+### Wireframe
+
+![Wireframe] (https://i.imgur.com/NhVDNRh.png)
