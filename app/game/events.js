@@ -13,7 +13,7 @@ const checkForWinner = (array) => {
   winConditions.forEach((inARow) => {
     if (inARow.every((space) => store.boardState[space] === store.currentPlayer)) {
       store.over = true
-      $('.square').removeClass('bg-primary')
+      $('.square').removeClass('hovered')
       $('.square').off()
       ui.onWinner()
     }
@@ -22,7 +22,7 @@ const checkForWinner = (array) => {
   // This is our 'tie' catcher. if our array doesn't include any free spaces, and no winner was found
   if (!array.includes('')) {
     store.over = true
-    $('.square').removeClass('bg-primary')
+    $('.square').removeClass('hovered')
     $('.square').off()
     ui.onTie()
   }
@@ -45,13 +45,13 @@ const onHover = (event) => {
 
   // Only execute code if space is empty, otherwise, do nothing
   if (playedSpace.text() === '') {
-    playedSpace.addClass('bg-primary')
+    playedSpace.addClass('hovered')
   }
 }
 
 const onMouseOut = (event) => {
   const playedSpace = $(event.target)
-  playedSpace.removeClass('bg-primary')
+  playedSpace.removeClass('hovered')
 }
 
 // event handler for clicking a playable space

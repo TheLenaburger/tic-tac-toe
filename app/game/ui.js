@@ -12,26 +12,26 @@ const startNewGame = (responseData) => {
 
   $('.square').text('')
   $('#play-mat').show(500)
-  $('#gameplay-feedback').text("Make your move! Show 'em what you got! X is up first!")
+  $('#gameplay-feedback').text("How 'bout we get things started with an X?")
 }
 
 const playSuccessful = (playedSpace) => {
   if (store.currentPlayer === 'x') {
-    playedSpace.text('X').removeClass('bg-primary')
+    playedSpace.text('X').removeClass('hovered')
   } else {
-    playedSpace.text('O').removeClass('bg-primary')
+    playedSpace.text('O').removeClass('hovered')
   }
 
   store.currentPlayer = store.currentPlayer === 'x' ? 'o' : 'x'
 
   if (store.over === false) {
-    $('#gameplay-feedback').text(store.currentPlayer + ' is playing now!')
+    $('#gameplay-feedback').text(store.currentPlayer.toUpperCase() + ' is playing now!')
   }
 }
 
 const onWinner = () => {
   if (store.currentPlayer === 'x') {
-    $('#gameplay-feedback').text('Wowzers, looks like X was the winner! Play again?')
+    $('#gameplay-feedback').text('Wowee-zowee, looks like X was the winner! Play again?')
   } else {
     $('#gameplay-feedback').text('Wa-hey! Against all odds, O is the winner! Play again?')
   }
