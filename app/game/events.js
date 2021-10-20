@@ -20,7 +20,7 @@ const checkForWinner = (array) => {
   })
 
   // This is our 'tie' catcher. if our array doesn't include any free spaces, and no winner was found
-  if (!array.includes('')) {
+  if ((store.over === false) && !array.includes('')) {
     store.over = true
     $('.square').removeClass('hovered')
     $('.square').off()
