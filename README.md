@@ -4,7 +4,7 @@ This app is a single-page, user-driven game of Tic Tac Toe. Nothing too fancy; a
 
 ## Important Links
 
-- [Cozy Tic Tac Toe Page] (https://thelenaburger.github.io/tic-tac-toe/)
+- [Cozy Tic Tac Toe Page](https://thelenaburger.github.io/tic-tac-toe/)
 
 ## Planning
 
@@ -18,4 +18,4 @@ This app is a single-page, user-driven game of Tic Tac Toe. Nothing too fancy; a
 
 ### Wireframe
 
-![Wireframe] (https://i.imgur.com/NhVDNRh.png)
+![Wireframe](https://i.imgur.com/NhVDNRh.png)
