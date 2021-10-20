@@ -11,7 +11,7 @@ const checkForWinner = (array) => {
   // check each winning array against the same positions on our boardState array
   // if there is a winning play, then run our onWinner event and end the game
   winConditions.forEach((inARow) => {
-    if (inARow.every((space) => store.boardState[space] === store.currentPlayer)) {
+    if ((inARow.every((space) => store.boardState[space] === store.currentPlayer)) && store.over === false) {
       store.over = true
       $('.square').removeClass('hovered')
       $('.square').off()
