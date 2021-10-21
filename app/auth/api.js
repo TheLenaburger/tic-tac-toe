@@ -9,6 +9,19 @@ const signUp = function (formData) {
   })
 }
 
+const autoSignIn = function () {
+  return $.ajax({
+    url: `${config.apiUrl}/sign-in`,
+    method: 'POST',
+    data: {
+      credentials: {
+        email: store.credentials.email,
+        password: store.credentials.password
+      }
+    }
+  })
+}
+
 const signIn = function (formData) {
   return $.ajax({
     url: `${config.apiUrl}/sign-in`,
@@ -29,6 +42,7 @@ const signOut = function () {
 
 module.exports = {
   signUp,
+  autoSignIn,
   signIn,
   signOut
 }
