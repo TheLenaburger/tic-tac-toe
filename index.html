@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cozy Tic Tac Toe</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Do not add `link` tags-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Do not add `script` tags-->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Cozy Tic Tac Toe</h1>
+      <div id="before-sign-in" class="container">
+        <div class="row text-center justify-content-around">
+          <div class="col-12">
+            <h4>Create a New User or Sign in, then kick back and relax with some Tic Tac Toe!</h4>
+          </div>
+          <div class="col-xs-12 col-sm-5 col-lg-4 col-xl-3 p-2 forms">
+            <form id="sign-up">
+              <input type="email" name="credentials[email]" placeholder="Email Address" required>
+              <input type="password" name="credentials[password]" placeholder="Password" required>
+              <input type="password" name="credentials[password_confirmation]" placeholder="Password Confirmation" required>
+              <br>
+              <button class="btn button-positive">Sign Me Up!</button>
+            </form>
+          </div>
+
+          <div class="col-xs-12 col-sm-5 col-lg-4 col-xl-3 p-2 forms">
+            <form id="sign-in">
+              <input type="email" name="credentials[email]" placeholder="Email Address" required>
+              <input type="password" name="credentials[password]" placeholder="Password" required>
+              <br>
+              <button class="btn button-positive">Sign In</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="after-sign-in" class="container">
+        <div class="row user-buttons">
+          <!-- This is where v2 functionality buttons will live -->
+          <div class="col-3 user-buttons">
+            <button id="sign-out" class="btn btn-danger">Sign Out</button>
+          </div>
+          <div class="col-3 user-buttons">
+            <button id="new-game" class="btn button-positive">New Game</button>
+          </div>
+          <div id="scoreboard" class="col-6">
+              <div class="row justify-content-end players">
+                <div class="col-2">"X":</div>
+                <div class="col-2">"O":</div>
+                <div class="col-2">"Cat":</div>
+              </div>
+              <div class="row justify-content-end scores">
+                <div id="xScore" class="col-2">0</div>
+                <div id="oScore" class="col-2">0</div>
+                <div id="catScore" class="col-2">0</div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <!-- This is the location for authorization/error messages -->
+      <div id="user-feedback" class="feedback"></div>
+    </header>
+    <hr>
+
+    <!-- space for text related to gameplay -->
+    <h4 id="gameplay-feedback" class="feedback"></h4>
+
+    <div id="play-mat" class="container">
+      <div id="game-board" class="row h-100">
+        <div class="col-4 square" id="topLeft" data-cell-index="0">
+        </div>
+        <div class="col-4 square" id="topMid" data-cell-index="1">
+        </div>
+        <div class="col-4 square" id="topRight" data-cell-index="2">
+        </div>
+        <div class="col-4 square" id="midLeft" data-cell-index="3">
+        </div>
+        <div class="col-4 square" id="mid" data-cell-index="4">
+        </div>
+        <div class="col-4 square" id="midRight" data-cell-index="5">
+        </div>
+        <div class="col-4 square" id="botLeft" data-cell-index="6">
+        </div>
+        <div class="col-4 square" id="botMid" data-cell-index="7">
+        </div>
+        <div class="col-4 square" id="botRight" data-cell-index="8">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

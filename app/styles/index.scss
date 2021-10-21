@@ -1,0 +1,92 @@
+@import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam:wght@700&family=Patrick+Hand&display=swap');
+
+body {
+  // background-color: #EEC170;
+  background: linear-gradient(to bottom right, #f4b678, #f29c00) fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #452103;
+  font-family: 'Patrick Hand', cursive;
+}
+
+h1 {
+  font-family: 'Kalam', cursive;
+  text-decoration: underline;
+  font-size: xx-large;
+}
+
+.hovered {
+  background-color: #f58549;
+}
+
+.button-positive {
+  background-color: #585123;
+  border: 1px solid #f58549;
+  color: #f0efeb;
+}
+
+.btn-danger {
+  background-color: #772f1a;
+  border: 1px solid #f58549;
+}
+
+.players {
+  text-decoration: underline;
+  font-weight: 200;
+  font-size: x-large;
+}
+
+.scores {
+  font-weight: 200;
+  font-size: x-large;
+}
+
+.forms {
+  border: 1px solid #772f1a;
+}
+
+input {
+  background-color: #f0efeb;
+}
+
+#after-sign-in, #new-game, #play-mat {
+  display: none;
+}
+
+h1, .feedback {
+  text-align: center;
+}
+
+#play-mat {
+  height: 60vh;
+  width: 60vh;
+}
+
+#game-board {
+  margin: auto;
+
+  max-height: calc(60vh-75px);
+  max-width: calc(60vh-75px);
+}
+
+.square {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+
+  &:nth-child(3n) {
+    border-right: 0;
+  }
+  &:nth-last-child(-1n + 3) {
+    border-bottom: 0;
+  }
+
+  min-height: calc(100%/3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(40vh/3);
+  user-select: none;
+}
