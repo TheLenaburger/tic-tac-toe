@@ -1,17 +1,5 @@
 const store = require('../store')
 
-// const signUpSuccess = function () {
-//   // $('#user-feedback').text("You've successfully created a new account!")
-//   // $('#user-feedback').addClass('text-success')
-//   // $('form').trigger('reset')
-
-//   // // This will reset the feedback message div to blank after 5 sec
-//   // setTimeout(() => {
-//   //   $('#user-feedback').removeClass('text-success')
-//   //   $('#user-feedback').text('')
-//   // }, 5000)
-// }
-
 const onError = function (error) {
   $('#user-feedback').text('There was an error handling that request. Please try again.')
   $('#user-feedback').addClass('text-danger')
