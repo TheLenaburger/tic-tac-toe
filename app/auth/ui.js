@@ -1,21 +1,16 @@
 const store = require('../store')
 
-const signUpSuccess = function (responseData) {
-  $('#user-feedback').text("You've successfully created a new account!")
-  $('#user-feedback').addClass('text-success')
-  $('form').trigger('reset')
+// const signUpSuccess = function () {
+//   // $('#user-feedback').text("You've successfully created a new account!")
+//   // $('#user-feedback').addClass('text-success')
+//   // $('form').trigger('reset')
 
-  // $('#rules-text').show()
-  // $('#game-board').show()
-
-  // This will reset the feedback message div to blank after 5 sec
-  setTimeout(() => {
-    $('#user-feedback').removeClass('text-success')
-    $('#user-feedback').text('')
-  }, 5000)
-
-  console.log(responseData)
-}
+//   // // This will reset the feedback message div to blank after 5 sec
+//   // setTimeout(() => {
+//   //   $('#user-feedback').removeClass('text-success')
+//   //   $('#user-feedback').text('')
+//   // }, 5000)
+// }
 
 const onError = function (error) {
   $('#user-feedback').text('There was an error handling that request. Please try again.')
@@ -30,8 +25,9 @@ const onError = function (error) {
 }
 
 const signInSuccess = function (responseData) {
-  // on sign-in, we need to store user data for authorization purposes
+  // on sign-in, we need to store user data for authorization purposes, and we'll overwrite the credentials we stored, if automatically signing in after creating new user
   store.user = responseData.user
+  store.credentials = ''
 
   $('#user-feedback').text("You've signed in successfully! Enjoy the game!")
   $('#user-feedback').addClass('text-success')
@@ -75,7 +71,6 @@ const signOutSuccess = function () {
 }
 
 module.exports = {
-  signUpSuccess,
   onError,
   signInSuccess,
   signOutSuccess

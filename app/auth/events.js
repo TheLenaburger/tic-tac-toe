@@ -1,6 +1,7 @@
 // location of all event handlers for authorization events
 
 const getFormFields = require('../../lib/get-form-fields')
+const store = require('../store')
 const api = require('./api')
 const ui = require('./ui')
 
@@ -9,9 +10,11 @@ const onSignUp = (event) => {
 
   const form = event.target
   const formData = getFormFields(form)
+  store.credentials = formData.credentials
 
   api.signUp(formData)
-    .then(ui.signUpSuccess)
+    .then(api.autoSignIn)
+    .then(ui.signInSuccess)
     .catch(ui.onError)
 }
 
